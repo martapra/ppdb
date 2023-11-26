@@ -8,16 +8,16 @@
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h5 class="card-title fw-bold">Pendaftaran Berhasil</h5>
-                            <p class="card-text">Selamatn anda berhasil melakukan pendaftaran</b>
+                            <p class="card-text">Selamat Anda Berhasil Melakukan Pendaftaran</b>
                             </p>
                         </div>
 
                         <div class="card-body">
                             <h5 class="card-title text-success">
-                                Selamatn anda berhasil melakukan pendaftaran
+                                Selamat Anda Berhasil Melakukan Pendaftaran
                             </h5>
-                            <p class="text-danger">Silahkan lakukan login dengan email dan password anda untuk melengkapi
-                                persyaratan pendaftaran</p>
+                            <p class="text-danger">Silahkan Lakukan Login dengan Email dan Password anda untuk melengkapi
+                                Persyaratan Pendaftaran</p>
                             <div class="text-end">
 
                                 <form id="logout-form" action="{{ route('login_kembali') }}" method="POST">
