@@ -10,7 +10,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Home</span></a>
     </li>
 
 
@@ -19,16 +19,35 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Addons
+        Menu
     </div>
 
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-    </li>
+    @if (auth()->user()->role == 'pendaftar')
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('biodataPendaftar') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>User Profile</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('syaratPendaftaran.index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Syarat Pendaftaran</span></a>
+        </li>
+    @endif
+    @if (auth()->user()->role == 'admin')
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('konfirmasiPendaftaran.index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Konfirmasi Pendaftaran</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('dataPeserta.index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Data Peserta</span></a>
+        </li>
+    @endif
 
 
     <!-- Divider -->

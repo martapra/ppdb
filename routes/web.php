@@ -37,3 +37,14 @@ Route::get('/daftar-syarat', [App\Http\Controllers\PendaftaranController::class,
 Route::post('/daftar-syarat', [App\Http\Controllers\PendaftaranController::class, 'daftar_syarat_store'])->name('daftar_syarat');
 Route::get('/success', [App\Http\Controllers\PendaftaranController::class, 'success'])->name('success');
 Route::post('/login-kembali', [App\Http\Controllers\PendaftaranController::class, 'login_kembali'])->name('login_kembali');
+
+Route::get('/dashboard', App\Http\Controllers\DashboardController::class)->name('dashboard');
+Route::get('/biodata-pendaftar', App\Http\Controllers\BiodataPendaftarController::class)->name('biodataPendaftar');
+Route::get('/syarat-pendaftaran', App\Http\Controllers\SyaratPendaftaranController::class)->name('syaratPendaftaran.index');
+
+Route::get('/konfirmasi-pendaftaran', [App\Http\Controllers\KonfirmasiPendaftaranController::class, 'index'])->name('konfirmasiPendaftaran.index');
+Route::put('/konfirmasi-pendaftaran/{pendaftar}', [App\Http\Controllers\KonfirmasiPendaftaranController::class, 'update'])->name('konfirmasiPendaftaran.update');
+
+Route::get('/data-peserta', [App\Http\Controllers\DataPesertaController::class, 'index'])->name('dataPeserta.index');
+Route::get('/data-peserta/{pendaftar}', [App\Http\Controllers\DataPesertaController::class, 'show'])->name('dataPeserta.show');
+Route::delete('/data-peserta/{pendaftar}', [App\Http\Controllers\DataPesertaController::class, 'delete'])->name('dataPeserta.destroy');

@@ -11,4 +11,9 @@ class Pendaftar extends Model
 
     protected $table = 'pendaftar';
     protected $guarded = ['id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
 }
