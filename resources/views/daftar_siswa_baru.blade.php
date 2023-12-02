@@ -8,7 +8,7 @@
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h5 class="card-title fw-bold">Data Calon Siswa</h5>
-                            <p class="card-text">Isi Form pendaftaran akun dengan benar</b>
+                            <p class="card-text">Isi Form Pendaftaran Akun dengan Benar</b>
                             </p>
                         </div>
 
@@ -17,7 +17,7 @@
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="nama_lengkap" class="form-label">{{ __('Nama_lengkap') }}</label>
+                                    <label for="nama_lengkap" class="form-label">{{ __('Nama Lengkap') }}</label>
                                     <input id="nama_lengkap" type="text"
                                         class="form-control @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap"
                                         value="{{ old('nama_lengkap') }}" required autocomplete="nama_lengkap" autofocus>
@@ -29,7 +29,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nama_panggilan" class="form-label">{{ __('Nama_panggilan') }}</label>
+                                    <label for="nama_panggilan" class="form-label">{{ __('Nama Panggilan') }}</label>
                                     <input id="nama_panggilan" type="text"
                                         class="form-control @error('nama_panggilan') is-invalid @enderror"
                                         name="nama_panggilan" value="{{ old('nama_panggilan') }}" required
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="tempat_lahir" class="form-label">{{ __('tempat_lahir') }}</label>
+                                        <label for="tempat_lahir" class="form-label">{{ __('Tempat Lahir') }}</label>
                                         <input id="tempat_lahir" type="text"
                                             class="form-control @error('tempat_lahir') is-invalid @enderror"
                                             name="tempat_lahir" value="{{ old('tempat_lahir') }}" required
@@ -56,7 +56,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="tanggal_lahir" class="form-label">{{ __('tanggal_lahir') }}</label>
+                                        <label for="tanggal_lahir" class="form-label">{{ __('Tanggal Lahir') }}</label>
                                         <input id="tanggal_lahir" type="date"
                                             class="form-control @error('tanggal_lahir') is-invalid @enderror"
                                             name="tanggal_lahir" value="{{ old('tanggal_lahir') }}" required
@@ -71,7 +71,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="jenis_kelamin" class="form-label">{{ __('jenis_kelamin') }}</label>
+                                    <label for="jenis_kelamin" class="form-label">{{ __('Jenis Kelamin') }}</label>
                                     <select name="jenis_kelamin" id="jenis)kelamin" class="form-select">
                                         <option value="{{ null }}">Pilih Jenis Kelamin</option>
                                         <option value="laki-laki"
@@ -89,7 +89,7 @@
 
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="anak_ke" class="form-label">{{ __('anak_ke') }}</label>
+                                        <label for="anak_ke" class="form-label">{{ __('Anak ke-') }}</label>
                                         <input id="anak_ke" type="number"
                                             class="form-control @error('anak_ke') is-invalid @enderror" name="anak_ke"
                                             value="{{ old('anak_ke') }}" required autocomplete="anak_ke" autofocus>
@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="jumlah_saudara_kandung"
-                                            class="form-label">{{ __('jumlah_saudara_kandung') }}</label>
+                                            class="form-label">{{ __('Jumlah Saudara Kandung') }}</label>
                                         <input id="jumlah_saudara_kandung" type="number"
                                             class="form-control @error('jumlah_saudara_kandung') is-invalid @enderror"
                                             name="jumlah_saudara_kandung" value="{{ old('jumlah_saudara_kandung') }}"
@@ -117,7 +117,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="tinggal_bersama" class="form-label">{{ __('tinggal_bersama') }}</label>
+                                    <label for="tinggal_bersama" class="form-label">{{ __('Tinggal Bersama') }}</label>
                                     <input id="tinggal_bersama" type="text"
                                         class="form-control @error('tinggal_bersama') is-invalid @enderror"
                                         name="tinggal_bersama" value="{{ old('tinggal_bersama') }}" required
