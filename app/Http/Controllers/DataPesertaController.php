@@ -14,4 +14,12 @@ class DataPesertaController extends Controller
         ];
         return view('pages.admin.data-peserta.index', $data);
     }
+
+    public function show(Pendaftar $pendaftar)
+    {
+        $data = [
+            'biodata' => $pendaftar
+        ];
+        return view('pages.admin.data-peserta.show', $data);
+    }
 }

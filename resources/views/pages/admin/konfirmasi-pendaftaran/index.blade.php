@@ -9,7 +9,7 @@
             <h1 class="h3 mb-0 text-gray-800">Konfirmasi Pendaftaran</h1>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <h5 class="card-title fw-bold">Konfirmasi pendaftaran</h5>
@@ -34,8 +34,12 @@
                                             @if ($pendaftar->status_pendaftaran == 'menunggu konfirmasi')
                                                 <div class="text-warning fw-bold">{{ $pendaftar->status_pendaftaran }}</div>
                                             @endif
-                                            @if ($pendaftar->status_pendaftaran == 'sudah dikonfirmasi')
-                                                <div class="text-success fw-bold">{{ $pendaftar->status_pendaftaran }}</div>
+                                            @if ($pendaftar->status_pendaftaran == 'terima')
+                                                <div class="text-success fw-bold text-capitalize">
+                                                    {{ $pendaftar->status_pendaftaran }}</div>
+                                            @elseif ($pendaftar->status_pendaftaran == 'tolak')
+                                                <div class="text-danger fw-bold text-capitalize">
+                                                    {{ $pendaftar->status_pendaftaran }}</div>
                                             @endif
                                         </td>
                                         <td>
@@ -43,8 +47,14 @@
                                                 method="POST">
                                                 @csrf
                                                 @method('PUT')
-                                                <input type="hidden" name="status_pendaftaran" value="sudah dikonfirmasi">
-                                                <button class="btn btn-warning rounded-0">Konfirmasi</button>
+                                                <a href="{{ route('dataPeserta.show', $pendaftar) }}"
+                                                    class="btn btn-info text-white fw-bold">Detail</a>
+                                                <input type="submit"
+                                                    class="btn btn-success text-white fw-bold text-capitalize"
+                                                    name="status_pendaftaran" value="terima">
+                                                <input type="submit"
+                                                    class="btn btn-danger text-white fw-bold text-capitalize"
+                                                    name="status_pendaftaran" value="tolak">
                                             </form>
                                         </td>
                                     </tr>

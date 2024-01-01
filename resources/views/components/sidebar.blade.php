@@ -7,8 +7,8 @@
         <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
     </a>
     <hr class="sidebar-divider my-0">
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Home</span></a>
     </li>
@@ -25,24 +25,24 @@
 
     <!-- Nav Item - Charts -->
     @if (auth()->user()->role == 'pendaftar')
-        <li class="nav-item">
+        <li class="nav-item {{ request()->routeIs('biodataPendaftar') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('biodataPendaftar') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>User Profile</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item {{ request()->routeIs('syaratPendaftaran.index') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('syaratPendaftaran.index') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Syarat Pendaftaran</span></a>
         </li>
     @endif
     @if (auth()->user()->role == 'admin')
-        <li class="nav-item">
+        <li class="nav-item {{ request()->routeIs('konfirmasiPendaftaran.index') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('konfirmasiPendaftaran.index') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Konfirmasi Pendaftaran</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item {{ request()->routeIs('dataPeserta.index') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('dataPeserta.index') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Data Peserta</span></a>

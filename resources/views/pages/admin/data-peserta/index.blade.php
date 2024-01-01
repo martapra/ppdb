@@ -9,7 +9,7 @@
             <h1 class="h3 mb-0 text-gray-800">Data Peserta</h1>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <h5 class="card-title fw-bold">Data Peserta</h5>
